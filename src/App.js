@@ -3,28 +3,10 @@ import Grid from "@material-ui/core/Grid";
 import Catalog from './components/Catalog';
 import NavBar from './components/NavBar'
 import { ProductProvider } from "./productContext";
-// import products from './data';
 import "./App.css";
-import { CodeSharp } from "@material-ui/icons";
 
 export default function App() {
-  // console.log(products)
 
-  const [allProducts, setAllProducts] = useState([]);
-
-  // useEffect(() => {
-  //   // console.log('allProductos', allProductos)
-  //   // cardProducts()
-  //   setAllProducts(products)
-
-  // }, [allProducts])
-
-  // const cardProducts = () => {
-  //   console.log('allProductos', allProducts)
-  //   products.map(product => (
-  //     <p>{product.name}</p>
-  //   ))
-  // }
 
   return (
     <ProductProvider>
