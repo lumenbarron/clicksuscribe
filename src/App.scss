@@ -1,0 +1,73 @@
+$color-white : #fff;
+$color-blue : #00539F;
+$color-yellow : #DB9736;
+$color-red: #B8122C;
+$color-green: #67943D;
+$color-second-blue : #4B7BAB;
+
+//Navbar
+
+#nav-bkg{
+    background: $color-white !important;
+}
+
+.logo-img{
+    padding: 2rem;
+    width: 250px;
+}
+
+.nav-row{
+    width: 100%;
+    justify-content: flex-end;
+    a{
+        color: $color-white;
+    }
+}
+
+.width-90{
+    width: 90%;
+}
+
+.bkg-blue{
+background: $color-blue;
+}
+
+.bkg-yellow{
+   background: $color-yellow;
+}
+
+.bkg-red{
+    background: $color-red;
+}
+
+.bkg-green{
+    background: $color-green;
+}
+
+.bkg-sec-blue{
+    background: $color-second-blue;
+}
+
+.search-button{
+    height: 2.5rem;
+    width: 10%;
+    border: none;
+    background:  $color-blue;
+    color: $color-white;
+}
+
+//Catalog
+.container-catalog{
+    padding: 0 5rem !important;
+}
+.row-title{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row-line{
+    width: 100%;
+    border-bottom: 2px solid gray;
+}
+
+//Card Catalog

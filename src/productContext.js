@@ -48,14 +48,6 @@ export const ProductProvider = (props) => {
             img : "https://i.postimg.cc/v8fbQnxy/Default.png"
         },
         {
-            name : "Skype for Business Online  Plan 2",
-            description : "Unified communications plan with advanced capabilities including enterprise Instant Messaging, Presence and online meetings with audio and video conferencing and multiparty data sharing.",
-            fabricator : "Microsoft",
-            id: "14c61-739.",
-            price : "4.63",
-            img : "https://i.postimg.cc/v8fbQnxy/Default.png"
-        },
-        {
             name : "Autodesk AutoCAD Commercial Single-user Annual Subscription Renewal Recurring with Basic Support",
             description : "Autodesk AutoCAD Commercial Single-user Annual Subscription Renewal Recurring with Basic Support.",
             fabricator : "Autodesk",
@@ -85,14 +77,6 @@ export const ProductProvider = (props) => {
             fabricator : "Autodesk",
             id: "001I1-006876-T671",
             price : "1225",
-            img : "https://i.postimg.cc/sxYrwFCx/Autocad.jpg"
-        },
-        {
-            name : "Autodesk AutoCAD 2017 Commercial New Single-user Additional Seat Monthly Auto-Renew Subscription wit",
-            description : "Autodesk AutoCAD 2017 Commercial New Single-user Additional Seat Monthly Auto-Renew Subscription with Advanced Support",
-            fabricator : "Autodesk",
-            id: "001I1-006286-T605",
-            price : "155",
             img : "https://i.postimg.cc/sxYrwFCx/Autocad.jpg"
         },
         {
