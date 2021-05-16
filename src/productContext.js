@@ -1,5 +1,4 @@
 import React, {useState, createContext} from 'react';
-import products from './data';
 
 export const ProductContext = createContext();
 

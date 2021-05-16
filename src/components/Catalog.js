@@ -9,27 +9,22 @@ export default function Catalog() {
   const [filterProducts, setFilterProducts] = useState([]);
   const [readyProducts, setReadyProducts] = useState(false);
 
-  console.log("products", products);
-
-  const selectFabricant = (event) =>{
+  const selectFabricant = (event) => {
     event.preventDefault();
     let fabricant = event.target.value;
-    console.log('fabricant', fabricant)
     if (fabricant !== "") {
-      let allFabricants = products.filter(( product ) =>
-      product.fabricator.includes(fabricant));
-      console.log('allFabricants', allFabricants)
+      let allFabricants = products.filter((product) =>
+        product.fabricator.includes(fabricant)
+      );
       if (allFabricants.length >= 1) {
-        console.log('find it', allFabricants)
-        setFilterProducts(allFabricants)
-        setReadyProducts(true)
-      } 
+        setFilterProducts(allFabricants);
+        setReadyProducts(true);
+      }
     } else {
-      console.log('nada 2')
-      setReadyProducts(false)
+      setReadyProducts(false);
     }
-  }
-  
+  };
+
   return (
     <Container fluid className="container-catalog">
       <Row className="row-title pt-4 m-0">
@@ -41,7 +36,6 @@ export default function Catalog() {
             <option value="Microsoft">Microsoft</option>
             <option value="Autodesk">Autodesk</option>
             <option value="VMWARE">VMWARE</option>
-            
           </select>
         </div>
       </Row>
@@ -50,30 +44,32 @@ export default function Catalog() {
       </Row>
       <Row className="row-line m-0 pb-3" />
       <Row>
-        { readyProducts && filterProducts.map((product) => (
-          <CardProduct
-          id={product.id}
-            name={product.name}
-            description={product.description}
-            fabricator={product.fabricator}
-            img={product.img}
-            key={product.id}
-            price={product.price}
-          />
-        ))}
+        {readyProducts &&
+          filterProducts.map((product) => (
+            <CardProduct
+              id={product.id}
+              name={product.name}
+              description={product.description}
+              fabricator={product.fabricator}
+              img={product.img}
+              key={product.id}
+              price={product.price}
+            />
+          ))}
       </Row>
       <Row>
-        { !readyProducts && products.map((product) => (
-          <CardProduct
-          id={product.id}
-            name={product.name}
-            description={product.description}
-            fabricator={product.fabricator}
-            img={product.img}
-            key={product.id}
-            price={product.price}
-          />
-        ))}
+        {!readyProducts &&
+          products.map((product) => (
+            <CardProduct
+              id={product.id}
+              name={product.name}
+              description={product.description}
+              fabricator={product.fabricator}
+              img={product.img}
+              key={product.id}
+              price={product.price}
+            />
+          ))}
       </Row>
     </Container>
   );

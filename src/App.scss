@@ -4,9 +4,15 @@ $color-yellow : #DB9736;
 $color-red: #B8122C;
 $color-green: #67943D;
 $color-second-blue : #4B7BAB;
+$color-gray : #E5E5E5;
+
+@mixin flexJustify($justify){
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+}
 
 //Navbar
-
 #nav-bkg{
     background: $color-white !important;
 }
@@ -70,4 +76,59 @@ background: $color-blue;
     border-bottom: 2px solid gray;
 }
 
-//Card Catalog
+//Card Producto
+.container-add-product{
+    border: 1px solid gray;
+    background: $color-gray;
+    padding: 1rem;
+}
+
+.container-img{
+    @include flexJustify(center);
+}
+
+.img-product{
+    width: 300px;
+    height: auto;
+}
+.description-product{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.title-quan{
+    display: flex;
+}
+
+.subtitle-quan{
+    color: gray;
+}
+
+.icon-shopping{
+    color: $color-white;
+}
+
+.title-total{
+    font-size: 1.2rem;
+    text-align: end;
+}
+
+.container-button-add{
+    text-align: end;
+}
+
+.button-add{
+    height: 3.5rem;
+    width: 10rem;
+    border: none;
+    background: $color-green;
+    color: #fff;
+}
+
+@media screen and (max-width: 400px) {
+    .container-catalog{
+        padding: 0 1rem !important;
+    }
+  }

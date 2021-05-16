@@ -18,32 +18,25 @@ import {
 import { faBuilding } from "@fortawesome/free-regular-svg-icons";
 import "../App.scss";
 
-export default function NavBar({onView}) {
+export default function NavBar({ onView }) {
   const [products, setProducts] = useContext(ProductContext);
 
   const selectProduct = (event) => {
     event.preventDefault();
     let name = event.target.value;
     if (name !== "") {
-      let selectProduct = products.filter(( product ) =>
-      product.name.includes(name)
+      let selectProduct = products.filter((product) =>
+        product.name.includes(name)
       );
       if (selectProduct.length >= 1) {
-        console.log('find it', selectProduct)
-        onView(selectProduct)
-        // setEachProduct(selectProduct);
-        // setReadyEachProduct(true);
-        // setProductError(false);
+        onView(selectProduct);
       } else {
-        console.log('nada')
-        name = ''
-        onView('')
-        // setReadyEachProduct(false);
-        // setProductError(true);
+        name="";
+        onView("");
       }
     }
-  }
-  
+  };
+
   return (
     <Navbar bg="light" expand="md" id="nav-bkg" className="m-0 p-0">
       <Navbar.Brand href="#home">
@@ -79,7 +72,11 @@ export default function NavBar({onView}) {
             </Nav.Link>
           </Row>
           <Row className="nav-row p-2 bkg-sec-blue">
-            <Form inline className="nav-row" onChange={(event) => selectProduct(event)}>
+            <Form
+              inline
+              className="nav-row"
+              onChange={(event) => selectProduct(event)}
+            >
               <FormControl
                 type="text"
                 list="products"
@@ -88,12 +85,12 @@ export default function NavBar({onView}) {
               />
               <button className="search-button">Buscar</button>
               <datalist id="products">
-                  {products.map((product) => (
-                    <option key={product.id} value={product.name}>
-                      {product.name}
-                    </option>
-                  ))}
-                </datalist>
+                {products.map((product) => (
+                  <option key={product.id} value={product.name}>
+                    {product.name}
+                  </option>
+                ))}
+              </datalist>
             </Form>
           </Row>
         </Container>
